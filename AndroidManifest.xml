@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" android:sharedUserId="android.uid.system" package="com.zktechnology.android.launcher" platformBuildVersionCode="32" platformBuildVersionName="12">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature android:name="android.hardware.camera.raw" android:required="false"/>
+    <uses-feature android:name="android.hardware.usb.host"/>
+    <original-package android:name="com.zktechnology.android.launcher"/>
+    <permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <permission android:name="com.android.launcher.permission.PRELOAD_WORKSPACE" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_uninstall_shortcut" android:label="@string/permlab_uninstall_shortcut" android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="dangerous"/>
+    <permission android:description="@string/permdesc_read_settings" android:label="@string/permlab_read_settings" android:name="com.android.launcher.permission.READ_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher_home" android:label="@string/application_name" android:largeHeap="true" android:name="com.zktechnology.android.launcher2.LauncherApplication" android:roundIcon="@mipmap/ic_launcher_round" android:screenOrientation="portrait" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:exported="true" android:name="com.zktechnology.android.activity.PrivacyAgreementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zktechnology.android.activity.IntroductionActivity" android:screenOrientation="portrait"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.zktechnology.android.receiver.Device070ExceptionRebootReceiver">
+            <intent-filter>
+                <action android:name="com.zkteco.android.core.reboot.device"/>
+            </intent-filter>
+        </receiver>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation" android:enabled="true" android:exported="true" android:launchMode="singleInstance" android:name="com.zktechnology.android.launcher2.ZKLauncher" android:screenOrientation="portrait" android:theme="@style/Theme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.custom.home"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/tag_type"/>
+        </activity>
+        <receiver android:name="com.zktechnology.android.receiver.AlarmReceiver"/>
+        <activity android:name="com.zktechnology.android.activity.MenuActivity" android:theme="@style/ZKAppTheme" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="com.zktechnology.android.activity.EditWidgetActivity"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.zktechnology.android.receiver.LogDebugReceiver">
+            <intent-filter>
+                <action android:name="com.zkteco.log.debug.on"/>
+                <action android:name="com.zkteco.log.debug.off"/>
+                <action android:name="com.zkteco.motion_detect.debug.on"/>
+                <action android:name="com.zkteco.motion_detect.debug.off"/>
+                <action android:name="com.zkteco.cpu.max.freq"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.zktechnology.android.face.UpdateFaceTemplateReceiver">
+            <intent-filter>
+                <action android:name="com.zkteco.android.employeemgmt.action.UPDATE_FACE_TEMPLATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.zktechnology.android.face.AlgorithmActivateReceiver">
+            <intent-filter>
+                <action android:name="com.zktechnology.android.zkliveface56.activation"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.zktechnology.android.receiver.ZkNfcReceiver"/>
+        <service android:enabled="true" android:exported="true" android:name="com.zktechnology.android.service.IPCServerService" android:persistent="true"/>
+        <service android:name="com.zktechnology.android.service.ZkCheckMultiBioDataCountService"/>
+        <activity android:name="com.zkteco.android.employeemgmt.fragment.ZKStaffModifyStep2Activity"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffHomeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffVerifyActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffModifyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffPasswordSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.zkteco.android.employeemgmt.activity.ZKStaffCardRegistrationActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/tag_type"/>
+        </activity>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffIconCollectionActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.zkteco.android.employeemgmt.activity.ZKStaffFingerprintActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffAddStepActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZkAddUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.base.ZKStaffBaseActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.zkteco.android.employeemgmt.activity.ZKStaffFaceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffVerifyVerActivity"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffProfessionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffTimeRuleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffForceFingerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffOfflineActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.zkteco.android.employeemgmt.activity.ZKStaffPalmActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="TencentMapSDK" android:value="HOWBZ-JPJKV-UYNP3-UJXPT-7A7ES-BMFZK"/>
+        <service android:exported="false" android:name="androidx.work.multiprocess.RemoteWorkManagerService"/>
+        <provider android:authorities="com.zktechnology.android.launcher.zk.edk.hw.encrypt.init.provider" android:enabled="true" android:exported="false" android:name="com.zkteco.edk.hardware.encrypt.ZkActivationContentProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.zkteco.edk.hardware.encrypt.ZkBackgroundService">
+            <intent-filter>
+                <action android:name="com.zktechnology.android.launcher.activation.ZkBackgroundService"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="false" android:exported="@bool/enable_gcm_scheduler_default" android:name="androidx.work.impl.background.gcm.WorkManagerGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.zktechnology.android.launcher.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+    </application>
+</manifest>
